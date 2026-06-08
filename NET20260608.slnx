@@ -1,4 +1,8 @@
 <Solution>
+  <Configurations>
+    <BuildType Name="Default" />
+    <Platform Name="Default" />
+  </Configurations>
   <Folder Name="/Elementos de la solución/">
     <File Path=".gitignore" />
     <File Path="README.md" />
