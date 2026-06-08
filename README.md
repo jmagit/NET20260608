@@ -30,11 +30,11 @@ netsh int ipv4 set dynamic tcp start=51000 num=14536
 
 #### SQL Server 2022
 
-    docker run -d -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@$$w0rd" -p 1433:1433 -v "%cd%":/var/opt/mssql/backup/ --workdir /var/opt/mssql/backup/ --name mssql2022 mcr.microsoft.com/mssql/server:2022-latest
+    docker run -d -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@$$w0rd" -e "MSSQL_AGENT_ENABLED=True" -p 1433:1433 -v "%cd%":/var/opt/mssql/backup/ --workdir /var/opt/mssql/backup/ --name mssql2022 mcr.microsoft.com/mssql/server:2022-latest
 
 #### SQL Server 2025
 
-    docker run -d -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@$$w0rd" -p 1433:1433 -v "%cd%":/var/opt/mssql/backup/ --workdir /var/opt/mssql/backup/ --name mssql2025 mcr.microsoft.com/mssql/server:2025-latest
+    docker run -d -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@$$w0rd" -e "MSSQL_AGENT_ENABLED=True" -p 1433:1433 -v "%cd%":/var/opt/mssql/backup/ --workdir /var/opt/mssql/backup/ --name mssql2025 mcr.microsoft.com/mssql/server:2025-latest
 
 ### Opción on-premises
 
