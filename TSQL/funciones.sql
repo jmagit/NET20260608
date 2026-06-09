@@ -117,6 +117,8 @@ FROM GENERATE_SERIES(1, 31) s LEFT OUTER JOIN (
     ) p ON s.value = p.dia
 ORDER BY value
 
+-- SELECT FULLTEXTSERVICEPROPERTY('IsFullTextInstalled');
+
 -- EXPRESIONES REGULARES
 
 -- Buscar empleados con correos que no cumplen un formato estándar
