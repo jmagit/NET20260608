@@ -108,15 +108,6 @@ DELETE Sales.SalesOrderHeader WHERE SalesOrderID = 75125
 USE [AdventureWorks2025]
 GO
 
-/****** Object:  UserDefinedFunction [dbo].[ufnSalesOrderHeaderChanges]    Script Date: 02/06/2026 21:44:22 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
--- =============================================
--- Author:		Javier
--- Description:	Control de Cambios
--- =============================================
 CREATE OR ALTER FUNCTION [dbo].[ufnSalesOrderHeaderChanges] (@previusVersion BIGINT)
 RETURNS TABLE AS RETURN (
     SELECT CT.SYS_CHANGE_VERSION CT_Version, CT.SYS_CHANGE_OPERATION CT_Operation, CT.SYS_CHANGE_COLUMNS CT_Columns, 
