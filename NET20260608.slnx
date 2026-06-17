@@ -1,11 +1,15 @@
 <Solution>
   <Configurations>
+    <BuildType Name="Debug" />
     <BuildType Name="Default" />
-    <Platform Name="Default" />
+    <BuildType Name="Release" />
   </Configurations>
   <Folder Name="/Elementos de la solución/">
     <File Path=".gitignore" />
     <File Path="README.md" />
     <File Path="TSQL/tablas.sql" />
   </Folder>
+  <Project Path="Demos/Demos.csproj" Id="712ebc11-78a9-4c63-8658-8ff7524df621">
+    <BuildType Solution="Default|*" Project="Release" />
+  </Project>
 </Solution>
