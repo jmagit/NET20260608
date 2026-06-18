@@ -13,7 +13,7 @@ namespace curso {
         static async Task Main(string[] args) {
             //await ShowModel();
             //await Consultas();
-            //await ConsultasDinamicas(/*predicado: o => o.BusinessEntityId <= 10, Orden: false*/);
+            //await ConsultasDinamicas(predicado: o => o.BusinessEntityId <= 10, Orden: false);
             //await CargaNavegacion();
             //await Pagination();
             //await UsarJson();
@@ -25,7 +25,7 @@ namespace curso {
             //await Enmasacaramiento();
             //await Modificar();
             //await Transaction();
-            //await Concurrencia();
+            await Concurrencia();
         }
 
         static DbContextOptions<AWContext> AWOptionsNoTracking {
@@ -309,11 +309,11 @@ namespace curso {
                     // 1	EM	0	NULL	KEN	J	SÁNCHEZ	NULL	0	NULL	<IndividualSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey"><TotalPurchaseYTD>0</TotalPurchaseYTD></IndividualSurvey>	92C4279F-1207-48A3-8448-4636514EB7E2	2020-01-07 00:00:00.000	[{"number":"697-555-0142","tipo":"HOME"},null]	["ken0@adventure-works.com"]	697-555-0142	2026-06-15 14:18:22.0258965	9999-12-31 23:59:59.9999999
                     person.FirstName = "KEN";
                     person.MiddleName = "J";
-                    person.LastName = "12345678Z";
                     person.LastName = "SÁNCHEZ";
+                    person.LastName = "12345678Z";
                     person.Suffix = null;
-                    person.EmailAddresses = "ken0@adventure-works.com";
                     person.EmailAddresses = "ken0adventure-works.com";
+                    person.EmailAddresses = "ken0@adventure-works.com";
                     person.ModifiedDate = DateTime.Now;
                     if(person.IsInvalid()) {
                         Console.WriteLine("Validacion --------------------------------->");
@@ -355,7 +355,7 @@ namespace curso {
                     try {
                         await dbContext.Notificaciones.Where(e => e.Id == 1)
                             .ExecuteUpdateAsync(setters => setters
-                                //.SetProperty(b => b.Mensaje, "Hola")
+                                .SetProperty(b => b.Mensaje, "Hola")
                                 .SetProperty(b => b.Leido, b => !b.Leido)
                             );
                         notificacion.Mensaje = notificacion.Mensaje + "x";
