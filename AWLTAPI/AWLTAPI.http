@@ -1,0 +1,6 @@
+@AWLTAPI_HostAddress = http://localhost:5124
+
+GET {{AWLTAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -9,6 +9,12 @@
     <File Path="README.md" />
     <File Path="TSQL/tablas.sql" />
   </Folder>
+  <Project Path="AWLTAPI/AWLTAPI.csproj" Id="ec09558f-d9fe-491e-ac13-88b100b79e11">
+    <BuildType Solution="Default|*" Project="Release" />
+  </Project>
+  <Project Path="Curso/Curso.csproj">
+    <BuildType Solution="Default|*" Project="Release" />
+  </Project>
   <Project Path="Demos/Demos.csproj" Id="712ebc11-78a9-4c63-8658-8ff7524df621">
     <BuildType Solution="Default|*" Project="Release" />
   </Project>
